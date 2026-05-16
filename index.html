@@ -2,52 +2,50 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>소설 설계자</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>📜 소설 설계자</h1>
-        <p class="subtitle">다섯 가지 요소를 채우면 소설 구조를 설계해 드립니다.</p>
+        <p>요소를 채우면 소설 구조를 설계해 드립니다.</p>
 
         <div class="input-form">
             <div class="input-group">
                 <label>1. 기초 경험</label>
-                <textarea id="experience" placeholder="힘들거나 슬펐던 기억을 적어주세요."></textarea>
+                <textarea id="experience" placeholder="슬펐던 기억을 적어주세요."></textarea>
             </div>
             <div class="input-group">
                 <label>2. 갈등 양상</label>
                 <select id="conflictType">
-                    <option value="내적 갈등">내적 갈등 (자신의 불안, 선택 등)</option>
-                    <option value="인물 간의 갈등">인물 간의 갈등 (친구, 가족 등)</option>
-                    <option value="사회와의 갈등">사회와의 갈등 (편견, 환경 등)</option>
+                    <option value="내적 갈등">내적 갈등</option>
+                    <option value="인물 간의 갈등">인물 간의 갈등</option>
+                    <option value="사회와의 갈등">사회와의 갈등</option>
                 </select>
             </div>
             <div class="input-group">
                 <label>3. 갈등 해결 방법</label>
-                <input type="text" id="solution" placeholder="예: 솔직한 대화, 새로운 깨달음">
+                <input type="text" id="solution" placeholder="예: 솔직한 대화">
             </div>
             <div class="input-group">
                 <label>4. 주인공의 성격</label>
-                <input type="text" id="character" placeholder="예: 상황 판단이 빠르고 영리한">
+                <input type="text" id="character" placeholder="예: 소심하지만 착한">
             </div>
             <div class="input-group">
                 <label>5. 소설의 메시지</label>
-                <input type="text" id="message" placeholder="예: 나를 괴롭히는 사람은 친구가 아니다">
+                <input type="text" id="message" placeholder="예: 진정한 우정">
             </div>
             <button id="generateBtn">상세 소설 시놉시스 생성</button>
         </div>
 
         <div id="resultSection" class="result-section hidden">
-            <div id="resSummary" class="summary-box"></div>
             <div class="plot-grid">
                 <div class="plot-item"><strong>기:</strong> <p id="part1"></p></div>
                 <div class="plot-item"><strong>승:</strong> <p id="part2"></p></div>
                 <div class="plot-item"><strong>전:</strong> <p id="part3"></p></div>
                 <div class="plot-item"><strong>결:</strong> <p id="part4"></p></div>
             </div>
-            <button onclick="location.reload()" style="background:#666; margin-top:20px;">다시 만들기</button>
+            <button onclick="location.reload()" style="background:#888;">다시 하기</button>
         </div>
     </div>
     <script src="script.js"></script>
