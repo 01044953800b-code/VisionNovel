@@ -1,31 +1,35 @@
-window.onload = function() {
-    const btn = document.getElementById('generateBtn');
-    
-    btn.addEventListener('click', function() {
-        // 1. 입력값 가져오기
-        const exp = document.getElementById('experience').value;
-        const con = document.getElementById('conflictType').value;
-        const sol = document.getElementById('solution').value;
-        const cha = document.getElementById('character').value;
-        const msg = document.getElementById('message').value;
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>소설 설계자</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📜 소설 설계자</h1>
+        <div class="input-form">
+            <div class="input-group"><label>1. 기초 경험</label><textarea id="experience"></textarea></div>
+            <div class="input-group">
+                <label>2. 갈등 양상</label>
+                <select id="conflictType">
+                    <option value="내적 갈등">내적 갈등</option>
+                    <option value="인물 간의 갈등">인물 간의 갈등</option>
+                </select>
+            </div>
+            <div class="input-group"><label>3. 갈등 해결 방법</label><input type="text" id="solution"></div>
+            <div class="input-group"><label>4. 주인공의 성격</label><input type="text" id="character"></div>
+            <div class="input-group"><label>5. 소설의 메시지</label><input type="text" id="message"></div>
+            <button id="generateBtn">상세 소설 시놉시스 생성</button>
+        </div>
 
-        // 2. 입력값이 비어있는지 확인
-        if (!exp || !sol || !cha || !msg) {
-            alert('모든 항목을 입력해야 소설이 완성됩니다!');
-            return;
-        }
-
-        // 3. 결과 영역 보이기
-        const resultSection = document.getElementById('resultSection');
-        resultSection.classList.remove('hidden');
-
-        // 4. 각 영역에 텍스트 넣기
-        document.getElementById('part1').innerText = `${cha} 성격의 주인공이 '${exp}'라는 사건을 겪으며 소설이 시작됩니다.`;
-        document.getElementById('part2').innerText = `주인공은 이 사건으로 인해 '${con}'을(를) 겪으며 깊은 슬픔과 고민에 빠집니다.`;
-        document.getElementById('part3').innerText = `절망적인 순간, 주인공은 '${sol}'(이)라는 결심을 통해 갈등을 해결할 용기를 냅니다.`;
-        document.getElementById('part4').innerText = `결국 '${msg}'라는 소중한 깨달음을 얻으며, 주인공은 한 뼘 더 성장한 모습으로 나아갑니다.`;
-
-        // 5. 결과창으로 부드럽게 스크롤
-        resultSection.scrollIntoView({ behavior: 'smooth' });
-    });
-};
+        <div id="resultSection" class="result-section hidden">
+            <div class="plot-item"><strong>기:</strong> <p id="part1"></p></div>
+            <div class="plot-item"><strong>승:</strong> <p id="part2"></p></div>
+            <div class="plot-item"><strong>전:</strong> <p id="part3"></p></div>
+            <div class="plot-item"><strong>결:</strong> <p id="part4"></p></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
