@@ -3,43 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나만의 소설 만들기: 마음의 기록</title>
+    <title>소설 설계자: 나만의 이야기 만들기</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>✍️ 마음의 기록, 소설이 되다</h1>
-            <p>힘들었던 경험을 한 문장으로 적어보세요. 멋진 소설의 밑그림을 그려줄게요.</p>
+            <h1>📜 소설 설계자 (Novel Architect)</h1>
+            <p>다섯 가지 요소를 채우면 당신만의 소설 구조를 설계해 드립니다.</p>
         </header>
 
         <main>
-            <div class="input-section">
-                <textarea id="userExperience" placeholder="예: 키우던 강아지가 하늘나라로 떠났을 때의 슬픔..."></textarea>
-                <button id="generateBtn">소설 구조 만들기</button>
+            <div class="input-form">
+                <div class="input-group">
+                    <label>1. 기초 경험</label>
+                    <textarea id="experience" placeholder="힘들거나 슬펐던 기억을 짧게 적어주세요."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>2. 갈등 양상</label>
+                    <select id="conflictType">
+                        <option value="내적 갈등">내적 갈등 (자신의 양심, 불안, 선택 등)</option>
+                        <option value="인물 간의 갈등">인물 간의 갈등 (친구, 가족, 선생님 등)</option>
+                        <option value="사회와의 갈등">사회와의 갈등 (규칙, 편견, 환경 등)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>3. 갈등 해결 방법</label>
+                    <input type="text" id="solution" placeholder="예: 솔직한 대화, 시간의 흐름, 새로운 깨달음 등">
+                </div>
+
+                <div class="input-group">
+                    <label>4. 주인공의 성격</label>
+                    <input type="text" id="character" placeholder="예: 소심하지만 사려 깊은, 겉으로는 까칠하지만 속은 따뜻한">
+                </div>
+
+                <div class="input-group">
+                    <label>5. 소설의 메시지 (주제)</label>
+                    <input type="text" id="message" placeholder="예: 아픔을 통해 성장한다, 진정한 우정의 의미">
+                </div>
+
+                <button id="generateBtn">상세 소설 시놉시스 생성</button>
             </div>
 
             <div id="resultSection" class="result-section hidden">
-                <h2>📖 소설 구성안</h2>
+                <h2>✨ 추천 소설 구성안</h2>
+                <div class="summary-box">
+                    <strong>[주제: <span id="resMessage"></span>]</strong>
+                    <p>주인공 성격: <span id="resChar"></span></p>
+                </div>
+                
                 <div class="plot-grid">
                     <div class="plot-item">
-                        <span class="label">기 (起)</span>
+                        <span class="label">기 (起): 배경과 사건의 시작</span>
                         <p id="part1"></p>
                     </div>
                     <div class="plot-item">
-                        <span class="label">승 (承)</span>
+                        <span class="label">승 (承): 갈등의 심화 (위기)</span>
                         <p id="part2"></p>
                     </div>
                     <div class="plot-item">
-                        <span class="label">전 (轉)</span>
+                        <span class="label">전 (轉): 전환점과 절정</span>
                         <p id="part3"></p>
                     </div>
                     <div class="plot-item">
-                        <span class="label">결 (結)</span>
+                        <span class="label">결 (結): 갈등 해결과 여운</span>
                         <p id="part4"></p>
                     </div>
                 </div>
-                <button onclick="location.reload()">다시 작성하기</button>
+                <button onclick="location.reload()" class="retry-btn">새로운 소설 쓰기</button>
             </div>
         </main>
     </div>
