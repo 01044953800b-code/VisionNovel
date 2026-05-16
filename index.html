@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 소설 만들기: 마음의 기록</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✍️ 마음의 기록, 소설이 되다</h1>
+            <p>힘들었던 경험을 한 문장으로 적어보세요. 멋진 소설의 밑그림을 그려줄게요.</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea id="userExperience" placeholder="예: 키우던 강아지가 하늘나라로 떠났을 때의 슬픔..."></textarea>
+                <button id="generateBtn">소설 구조 만들기</button>
+            </div>
+
+            <div id="resultSection" class="result-section hidden">
+                <h2>📖 소설 구성안</h2>
+                <div class="plot-grid">
+                    <div class="plot-item">
+                        <span class="label">기 (起)</span>
+                        <p id="part1"></p>
+                    </div>
+                    <div class="plot-item">
+                        <span class="label">승 (承)</span>
+                        <p id="part2"></p>
+                    </div>
+                    <div class="plot-item">
+                        <span class="label">전 (轉)</span>
+                        <p id="part3"></p>
+                    </div>
+                    <div class="plot-item">
+                        <span class="label">결 (結)</span>
+                        <p id="part4"></p>
+                    </div>
+                </div>
+                <button onclick="location.reload()">다시 작성하기</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
