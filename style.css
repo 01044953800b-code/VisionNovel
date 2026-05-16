@@ -1,75 +1,11 @@
-body {
-    background-color: #f4f7f6;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.container {
-    max-width: 600px;
-    width: 100%;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-h1, .subtitle { text-align: center; }
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input[type="text"], select, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box; /* 이 설정이 있어야 옆으로 안 삐져나갑니다 */
-}
-
+body { background-color: #f0f2f5; font-family: sans-serif; display: flex; justify-content: center; padding: 20px; }
+.container { max-width: 500px; width: 100%; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+h1 { color: #2c3e50; text-align: center; }
+.input-group { margin-bottom: 15px; }
+label { display: block; font-weight: bold; margin-bottom: 5px; }
+input, select, textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
 textarea { height: 80px; }
-
-button {
-    width: 100%;
-    padding: 15px;
-    background-color: #4a7c59;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover { background-color: #3d664a; }
-
+button { width: 100%; padding: 15px; background: #4a7c59; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold; }
 .hidden { display: none; }
-
-.result-section {
-    margin-top: 30px;
-    border-top: 2px solid #eee;
-    padding-top: 20px;
-}
-
-.summary-box {
-    background: #e8f4fd;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.plot-item {
-    background: #fafafa;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-left: 4px solid #4a7c59;
-}
+.result-section { margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px; }
+.plot-item { background: #f9f9f9; padding: 10px; margin-bottom: 10px; border-left: 4px solid #4a7c59; }
