@@ -1,59 +1,75 @@
 body {
-    background-color: #f0f2f5;
-    font-family: 'Pretendard', sans-serif;
-    line-height: 1.6;
-    margin: 0;
+    background-color: #f4f7f6;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
     padding: 20px;
 }
 
 .container {
-    max-width: 700px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-h1 { text-align: center; color: #2c3e50; margin-bottom: 10px; }
-header p { text-align: center; color: #7f8c8d; margin-bottom: 40px; }
+h1, .subtitle { text-align: center; }
 
-.input-group { margin-bottom: 20px; }
-.input-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #34495e; }
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 
 input[type="text"], select, textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* 이 설정이 있어야 옆으로 안 삐져나갑니다 */
 }
 
-textarea { height: 80px; resize: none; }
+textarea { height: 80px; }
 
 button {
     width: 100%;
     padding: 15px;
-    background: #5dade2;
+    background-color: #4a7c59;
     color: white;
     border: none;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: bold;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
-button:hover { background: #3498db; }
+button:hover { background-color: #3d664a; }
 
-.result-section { margin-top: 40px; animation: fadeIn 0.5s ease-in; }
-.summary-box { background: #ebf5fb; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center; }
-
-.plot-item { margin-bottom: 15px; padding: 15px; border-left: 4px solid #5dade2; background: #fdfdfd; }
-.label { font-weight: bold; color: #2980b9; }
-
-.retry-btn { background: #95a5a6; margin-top: 20px; }
 .hidden { display: none; }
 
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.result-section {
+    margin-top: 30px;
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+}
+
+.summary-box {
+    background: #e8f4fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.plot-item {
+    background: #fafafa;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #4a7c59;
+}
